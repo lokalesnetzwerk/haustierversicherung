@@ -6,10 +6,10 @@ import java.time.Period;
 
 public abstract class Tier implements Versicherbar{
 
-	protected final LocalDate birthday;
+	protected final LocalDate geburtstag;
 
-	protected Tier(LocalDate birthday) {
-		this.birthday = birthday;
+	protected Tier(LocalDate geburtstag) {
+		this.geburtstag = geburtstag;
 	}
 
 	public BigDecimal calculateAltersfaktor() {
@@ -20,6 +20,6 @@ public abstract class Tier implements Versicherbar{
 	}
 	
 	private int age() {
-		return Period.between(birthday, LocalDate.now()).getYears();
+		return Period.between(geburtstag, LocalDate.now()).getYears();
 	}
 }

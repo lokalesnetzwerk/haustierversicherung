@@ -7,8 +7,8 @@ public class Dackel extends Hund {
 
 	private static final BigDecimal RABATT = new BigDecimal("0.9");
 
-	public Dackel(LocalDate birthday) {
-		super(birthday);
+	public Dackel(LocalDate geburtstag) {
+		super(geburtstag);
 	}
 
 	@Override

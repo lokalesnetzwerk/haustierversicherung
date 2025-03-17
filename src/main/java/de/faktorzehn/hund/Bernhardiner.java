@@ -7,8 +7,8 @@ public class Bernhardiner extends Hund {
 
 	private static final BigDecimal AUFSCHLAG = new BigDecimal("1.1");
 
-	public Bernhardiner(LocalDate birthday) {
-		super(birthday);
+	public Bernhardiner(LocalDate geburtstag) {
+		super(geburtstag);
 	}
 
 	@Override

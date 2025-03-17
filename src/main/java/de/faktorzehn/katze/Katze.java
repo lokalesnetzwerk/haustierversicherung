@@ -8,8 +8,8 @@ import java.time.LocalDate;
 public class Katze extends Tier {
 	public static final BigDecimal BASIS_VERSICHERUNGSSUMME = new BigDecimal("2000");
 
-	public Katze(LocalDate birthday) {
-		super(birthday);
+	public Katze(LocalDate geburtstag) {
+		super(geburtstag);
 	}
 
 	@Override

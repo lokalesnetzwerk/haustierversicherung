@@ -31,9 +31,9 @@ public class Versicherung {
 		LocalDate startPremiumTarif = LocalDate.of(nextYear, Month.JULY, 1);
 		LocalDate startKompaktUndOptimalTarif = LocalDate.of(nextYear, Month.JANUARY, 1);
 		if (tarifVariante.equals(TarifVariante.PREMIUM) && versicherungsBeginn.isBefore(startPremiumTarif)) {
-			throw new IllegalArgumentException("ZU FRÜH!");
+			throw new IllegalArgumentException(TarifVariante.PREMIUM + "-Tarife bieten wir leider erst ab dem " + startPremiumTarif.getDayOfMonth() + "." + startPremiumTarif.getMonth().getValue() + " des Folgejahres an.");
 		} else if (versicherungsBeginn.isBefore(startKompaktUndOptimalTarif)) {
-			throw new IllegalArgumentException("Zum " + versicherungsBeginn + " bieten wir einen " + tarifVariante + " Tarif leider noch nicht an.");
+			throw new IllegalArgumentException(TarifVariante.OPTIMAL + "- und " + TarifVariante.KOMPAKT + "-Tarife bieten wir leider erst ab dem " + startKompaktUndOptimalTarif.getDayOfMonth() + "." + startKompaktUndOptimalTarif.getMonth().getValue() + " des Folgejahres an.");
 		}
 	}
 }
